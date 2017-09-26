@@ -1,0 +1,10 @@
+{
+  "root": true,
+  "extends": [
+    "bbt"
+  ],
+  "env": {
+    "browser": true,
+    "node": true
+  }
+}

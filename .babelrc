@@ -1,0 +1,20 @@
+{
+  "presets" : ["react", ["env", {
+    "targets": {
+      "browser": true
+    }
+  }]],
+  "plugins": [
+    ["transform-class-properties"],
+    ["babel-plugin-root-import",
+      [{
+        "rootPathPrefix": "~",
+        "rootPathSuffix": "source/client/js"
+      },
+        {
+          "rootPathPrefix": "@",
+          "rootPathSuffix": "source/data"
+        }]
+    ]
+  ]
+}
