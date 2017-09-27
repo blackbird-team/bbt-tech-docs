@@ -7,6 +7,14 @@ const SubscriptionMap = [
 				store: "viewport"
 			}
 		]
+	},
+	{
+		class: "viewport",
+		storesRules: [
+			{
+				store: "viewport"
+			}
+		]
 	}
 ]
 

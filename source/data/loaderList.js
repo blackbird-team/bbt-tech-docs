@@ -1,5 +1,6 @@
 import { StoreController } from "redux-store-controller";
 import history from "~/stores/history";
+import HistoryController from "~/controllers/historyController";
 import ViewController from "~/views/viewController";
 import ScrollController from "~/controllers/scrollController";
 
@@ -36,6 +37,12 @@ const LoaderList = [
 	{
 		step: 1,
 		parts: [
+			{
+				name: "historyController",
+				type: "class",
+				controller: HistoryController,
+				params: ["stores", "history", { name: "viewport" }]
+			},
 			{
 				name: "view",
 				type: "class",
