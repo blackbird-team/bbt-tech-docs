@@ -1,0 +1,45 @@
+nav
+  width: 50px
+  background: #23221f
+  color: #6d929b
+  display: flex
+  flex-direction: column
+  position: fixed
+  left: 0
+  top: 0
+  height: 100%
+  animation-name: closeMenu
+  animation-timing-function: inOut-back
+  animation-duration: .5s
+  animation-iteration-count: 1
+  animation-fill-mode: forwards
+
+  > div
+    display: flex
+    padding: 10px 15px
+    &:hover
+      background: #393838
+    &.active
+      color: #968ea3
+    p
+      animation-name: hide
+      animation-timing-function: inOut-back
+      animation-duration: .5s
+      animation-iteration-count: 1
+      animation-fill-mode: forwards
+      margin: auto 0
+      font-size: 13px
+      width: 100px
+      flex-basis: 100px
+      flex-shrink: 0
+
+  .icon
+    width: 50px
+    font-size: 25px
+    text-align: left
+
+
+nav:hover
+  animation-name: openMenu
+  > div p
+    animation-name: show

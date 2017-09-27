@@ -1,0 +1,49 @@
+@keyframes openMenu
+  0%
+    width: 50px
+    > div p
+      visibility: hidden
+  100%
+    width: 200px
+    > div p
+      visibility: visible
+
+@keyframes closeMenu
+  0%
+    width: 200px
+    > div p
+      visibility: visible
+  100%
+    width: 50px
+    > div p
+      visibility: hidden
+
+@keyframes show
+  0%
+    opacity: 0
+    margin-left: -50px
+    transform: rotateY(90deg)
+    width: 150px
+  30%
+    opacity: 0
+    width: 150px
+  100%
+    opacity: 1
+    margin-left: 0
+    transform: rotateY(0deg)
+    width: 150px
+
+@keyframes hide
+  0%
+    opacity: 1
+    margin-left: 0
+    transform: rotateY(0deg)
+    width: 150px
+  70%
+    opacity: 0
+    width: 150px
+  100%
+    opacity: 0
+    margin-left: -50px
+    transform: rotateY(90deg)
+    width: 150px
