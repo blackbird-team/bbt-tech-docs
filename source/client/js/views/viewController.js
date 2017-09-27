@@ -1,7 +1,7 @@
 import { createElement } from "react";
 import { render } from "react-dom";
 
-// import HeaderComposition from "./components/header/headerComposition";
+import NavComposition from "./components/nav/navComposition.jsx";
 // import FooterComposition from "./components/footer/footerComposition";
 import IndexView from "./indexView";
 
@@ -11,7 +11,7 @@ class ViewController {
 			createElement(
 				"div",
 				{ id: "wrapper" },
-				// createElement(HeaderComposition, options),
+				createElement(NavComposition, options),
 				createElement(IndexView, options),
 				// createElement(FooterComposition, options)
 			),

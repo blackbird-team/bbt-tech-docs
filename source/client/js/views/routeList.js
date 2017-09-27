@@ -1,13 +1,17 @@
-import ListComposition from "./components/list/listComposition";
-// import ArticleComposition from "./components/common/articleComposition";
+import ListComposition from "./components/list/listComposition.jsx";
+import ArticleComposition from "./components/articles/articleComposition.jsx";
 
 const RouteList = {
 	"/": {
 		child: ListComposition,
 		type: "common"
 	},
-	"default": {
+	"/home": {
 		child: ListComposition,
+		type: "common"
+	},
+	"default": {
+		child: ArticleComposition,
 		type: "common"
 	}
 };
