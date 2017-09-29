@@ -32,6 +32,36 @@ const TableOfContent = [
 		]
 	},
 	{
+		key: "documents",
+		name: "Нормы документация",
+		icon: "book"
+	},
+	{
+		key: "tools",
+		name: "Инструменты",
+		icon: "cogs",
+		sub: [
+			{
+				name: "babel"
+			},
+			{
+				name: "lint"
+			},
+			{
+				name: "webpack"
+			},
+			{
+				name: "idea"
+			},
+			{
+				name: "text-editor"
+			},
+			{
+				name: "sass"
+			}
+		]
+	},
+	{
 		key: "dev-scenario",
 		name: "Сценарии",
 		icon: "map-signs",
@@ -76,32 +106,27 @@ const TableOfContent = [
 		]
 	},
 	{
-		key: "documents",
-		name: "Нормы документация",
-		icon: "book"
-	},
-	{
-		key: "tools",
-		name: "Инструменты",
-		icon: "cogs",
+		key: "program-structures",
+		name: "Структуры программ",
+		icon: "folder",
 		sub: [
 			{
-				name: "babel"
+				name: "front"
 			},
 			{
-				name: "lint"
+				name: "service"
 			},
 			{
-				name: "webpack"
+				name: "back"
 			},
 			{
-				name: "idea"
+				name: "server"
 			},
 			{
-				name: "text-editor"
+				name: "standalone"
 			},
 			{
-				name: "sass"
+				name: "npm-module"
 			}
 		]
 	},
