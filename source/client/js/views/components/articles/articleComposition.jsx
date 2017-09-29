@@ -1,7 +1,9 @@
 import React from "react";
 import { ComponentStateStore } from "redux-store-controller";
+import { words } from "lodash";
 import ArticleView from "./articleView.jsx";
 import ProgramTypesListComposition from "./programTypes/programTypesListComposition.jsx";
+import ProgramStructuresComposition from "./programStructures/programStructuresComposition.jsx";
 
 class ArticleComposition extends ComponentStateStore {
 	constructor(props) {
@@ -9,11 +11,13 @@ class ArticleComposition extends ComponentStateStore {
 	}
 
 	getArticle() {
-		const path = this.state.viewport.replace("/", "");
+		const path = words(this.state.viewport, /[^/ ]+/g);
 
-		switch (path) {
+		switch (path[0]) {
 			case "program-types":
 				return <ProgramTypesListComposition stores={this.props.stores} />;
+			case "program-structures":
+				return <ProgramStructuresComposition stores={this.props.stores} />;
 			default:
 				return <ArticleView stores={this.props.stores} />;
 		}

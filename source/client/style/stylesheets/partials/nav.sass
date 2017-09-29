@@ -43,3 +43,23 @@ nav:hover
   animation-name: openMenu
   > div p
     animation-name: show
+
+
+.tab-menu
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  border-bottom: 1px solid #daecf1
+  color: #888
+  .tab-menu-item
+    padding: 10px 15px
+    &:hover
+      color: #333333
+      text-decoration: underline
+    &.active
+      background: #daecf1
+      color: #333
+
+.form-control
+  padding: 5px 15px
+  margin: 10px 0

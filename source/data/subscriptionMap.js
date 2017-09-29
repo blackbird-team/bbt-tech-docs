@@ -1,4 +1,3 @@
-
 const SubscriptionMap = [
 	{
 		component: "viewport",
@@ -13,6 +12,27 @@ const SubscriptionMap = [
 		storesRules: [
 			{
 				store: "viewport"
+			}
+		]
+	},
+	{
+		component: "programStructureTab",
+		storesRules: [
+			{
+				store: "programStructureTab",
+				fileds: ["tab"]
+			},
+			{
+				store: "viewport"
+			}
+		]
+	},
+	{
+		component: "programStructureView",
+		storesRules: [
+			{
+				store: "programStructureTab",
+				fileds: ["tree", "tab"]
 			}
 		]
 	}
