@@ -1,5 +1,11 @@
-const Config = {
-	port: 2222
-}
-
-export default Config;
+export default {
+	port: 2222,
+	programTypes: [
+		"frontend",
+		"backend",
+		"fullstack",
+		"service",
+		"standalone",
+		"npm"
+	]
+};
