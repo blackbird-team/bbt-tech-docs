@@ -1,7 +1,8 @@
 import { Component, createElement } from "react";
 import ReactMarkdown from "react-markdown";
-import forEach from "lodash/forEach";
+import { assign, forEach }from "lodash";
 import Config from "@/config";
+import CodeBlock from "~/views/components/common/codeBlockView.jsx";
 
 class ArticleView extends Component {
 	constructor(props) {
@@ -33,7 +34,10 @@ class ArticleView extends Component {
 
 	getArticle() {
 		return createElement(ReactMarkdown, {
-			source: this.state.article
+			source: this.state.article,
+			renderers: assign({}, ReactMarkdown.renderers, {
+				CodeBlock
+			})
 		});
 	}
 
