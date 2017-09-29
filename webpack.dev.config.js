@@ -4,8 +4,8 @@ module.exports = {
 		`${__dirname}/node_modules/webpack/hot/dev-server`
 	],
 	output: {
-		path: `${__dirname}/build/`,
-		publicPath: "/build/",
+		path: `${__dirname}/public/`,
+		publicPath: "/public/",
 		filename: "main.min.js"
 	},
 	module: {
@@ -15,12 +15,22 @@ module.exports = {
 				use: ["style-loader", "css-loader", "sass-loader"]
 			},
 			{
-				test: /\.(png|jpg|gif|svg|ttf|eot|woff|woff2|otf)$/,
-				exclude: /node_modules/,
+				test: /\.(jpg|jpeg|gif|png)$/,
+				exclude: /\/node_modules\//,
 				use: {
 					loader: "file-loader",
 					options: {
-						name: "[path][name].[ext]"
+						name: "./style/img/[name].[ext]"
+					}
+				}
+			},
+			{
+				test: /\.(woff|woff2|eot|ttf|svg|otf)$/,
+				exclude: /\/node_modules\//,
+				use: {
+					loader: "file-loader",
+					options: {
+						name: "./style/fonts/[name].[ext]"
 					}
 				}
 			},

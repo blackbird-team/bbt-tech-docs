@@ -59,7 +59,7 @@ class HttpServer {
 	}
 
 	initView() {
-		this.app.use("/build", express.static("build"));
+		this.app.use("/public", express.static("public"));
 	}
 
 	initGetHandlers() {

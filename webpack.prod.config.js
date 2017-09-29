@@ -8,8 +8,8 @@ module.exports = {
 	context: `${__dirname}/source/`,
 	entry: [`${__dirname}/source/client/js/index.js`],
 	output: {
-		path: `${__dirname}/build/`,
-		publicPath: "/build/",
+		path: `${__dirname}/public/`,
+		publicPath: "/public/",
 		filename: "main.min.js"
 	},
 	target: "web",
@@ -23,12 +23,22 @@ module.exports = {
 				})
 			},
 			{
-				test: /\.(jpg|jpeg|gif|png|woff|woff2|eot|ttf|svg|otf)$/,
+				test: /\.(jpg|jpeg|gif|png)$/,
 				exclude: /\/node_modules\//,
 				use: {
 					loader: "file-loader",
 					options: {
-						name: "[path][name].[ext]"
+						name: "./style/img/[name].[ext]"
+					}
+				}
+			},
+			{
+				test: /\.(woff|woff2|eot|ttf|svg|otf)$/,
+				exclude: /\/node_modules\//,
+				use: {
+					loader: "file-loader",
+					options: {
+						name: "./style/fonts/[name].[ext]"
 					}
 				}
 			},
@@ -43,7 +53,7 @@ module.exports = {
 		]
 	},
 	plugins: [
-		new CleanWebpackPlugin([`${__dirname}/build/`]),
+		new CleanWebpackPlugin([`${__dirname}/public/`]),
 		new ExtractTextPlugin({
 			filename: "./style/style.min.css",
 			disable: false,
