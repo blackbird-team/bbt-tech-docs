@@ -1,4 +1,5 @@
 module.exports = {
+	context: `${__dirname}/source/client/`,
 	entry: [
 		`${__dirname}/source/client/js/index`,
 		`${__dirname}/node_modules/webpack/hot/dev-server`
@@ -15,22 +16,12 @@ module.exports = {
 				use: ["style-loader", "css-loader", "sass-loader"]
 			},
 			{
-				test: /\.(jpg|jpeg|gif|png)$/,
+				test: /\.(jpg|jpeg|gif|png|woff|woff2|eot|ttf|svg|otf)$/,
 				exclude: /\/node_modules\//,
 				use: {
 					loader: "file-loader",
 					options: {
-						name: "./style/img/[name].[ext]"
-					}
-				}
-			},
-			{
-				test: /\.(woff|woff2|eot|ttf|svg|otf)$/,
-				exclude: /\/node_modules\//,
-				use: {
-					loader: "file-loader",
-					options: {
-						name: "./style/fonts/[name].[ext]"
+						name: "[path][name].[ext]"
 					}
 				}
 			},

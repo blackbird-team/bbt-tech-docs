@@ -5,7 +5,7 @@ const MinifyPlugin = require("babel-minify-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 
 module.exports = {
-	context: `${__dirname}/source/`,
+	context: `${__dirname}/source/client/`,
 	entry: [`${__dirname}/source/client/js/index.js`],
 	output: {
 		path: `${__dirname}/public/`,
@@ -23,22 +23,12 @@ module.exports = {
 				})
 			},
 			{
-				test: /\.(jpg|jpeg|gif|png)$/,
+				test: /\.(jpg|jpeg|gif|png|woff|woff2|eot|ttf|svg|otf)$/,
 				exclude: /\/node_modules\//,
 				use: {
 					loader: "file-loader",
 					options: {
-						name: "./style/img/[name].[ext]"
-					}
-				}
-			},
-			{
-				test: /\.(woff|woff2|eot|ttf|svg|otf)$/,
-				exclude: /\/node_modules\//,
-				use: {
-					loader: "file-loader",
-					options: {
-						name: "./style/fonts/[name].[ext]"
+						name: "[path][name].[ext]"
 					}
 				}
 			},
