@@ -20,13 +20,7 @@ class NavComposition extends Component {
 	}
 
 	render() {
-		const home = {
-			key: "home",
-			name: "home",
-			icon: "home"
-		};
-
-		return createElement("nav", null, this.getItem(home), this.getList());
+		return createElement("nav", null, this.getList());
 	}
 }
 

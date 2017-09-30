@@ -1,4 +1,4 @@
-import React from "react";
+import React, { createElement } from "react";
 import { ComponentStateStore } from "redux-store-controller";
 import FontAwesome from "react-fontawesome";
 import { includes } from "lodash";
@@ -13,11 +13,11 @@ class NavItem extends ComponentStateStore {
 	}
 
 	getIcon() {
-		return this.props.item.icon ? (
-			<div className="icon">
-				<FontAwesome name={this.props.item.icon} />
-			</div>
-		) : null;
+		if (typeof this.props.item.icon === "undefined") return null;
+
+		const props = { className: "icon", key: `${this.props.item.key}-icon` };
+		const fa = createElement(FontAwesome, { name: this.props.item.icon });
+		return createElement("div", props, fa);
 	}
 
 	isActive() {
@@ -25,15 +25,16 @@ class NavItem extends ComponentStateStore {
 	}
 
 	render() {
-		return (
-			<div
-				key={this.props.item.key}
-				className={this.isActive()}
-				onClick={this.onClick.bind(this)}
-			>
-				{this.getIcon()}
-				<p>{this.props.item.name}</p>
-			</div>
+		const props = {
+			key: `${this.props.item.key}-item`,
+			className: this.isActive(),
+			onClick: this.onClick.bind(this)
+		};
+		return createElement(
+			"div",
+			props,
+			this.getIcon(),
+			<p>{this.props.item.name}</p>
 		);
 	}
 }
