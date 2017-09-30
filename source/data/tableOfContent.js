@@ -1,5 +1,10 @@
 const TableOfContent = [
 	{
+		key: "home",
+		name: "Оглавление",
+		icon: "home"
+	},
+	{
 		key: "environment",
 		name: "Среда разработки",
 		icon: "terminal"
@@ -11,9 +16,10 @@ const TableOfContent = [
 		sub: [
 			{
 				key: "commit-name",
-				name: ""
+				name: "commit-name"
 			},
 			{
+				key: "commit-scopes",
 				name: "commit-scopes"
 			}
 		]
@@ -24,10 +30,12 @@ const TableOfContent = [
 		icon: "code",
 		sub: [
 			{
-				name: "names"
+				name: "names",
+				key: "names"
 			},
 			{
-				name: "scopes"
+				name: "scopes",
+				key: "scopes"
 			}
 		]
 	},
@@ -42,22 +50,28 @@ const TableOfContent = [
 		icon: "cogs",
 		sub: [
 			{
-				name: "babel"
+				name: "babel",
+				key: "babel"
 			},
 			{
-				name: "lint"
+				name: "lint",
+				key: "lint"
 			},
 			{
-				name: "webpack"
+				name: "webpack",
+				key: "webpack"
 			},
 			{
-				name: "idea"
+				name: "idea",
+				key: "idea"
 			},
 			{
-				name: "text-editor"
+				name: "text-editor",
+				key: "text-editor"
 			},
 			{
-				name: "sass"
+				name: "sass",
+				key: "sass"
 			}
 		]
 	},
@@ -67,16 +81,20 @@ const TableOfContent = [
 		icon: "map-signs",
 		sub: [
 			{
-				name: "init"
+				name: "init",
+				key: "init"
 			},
 			{
-				name: "bundle"
+				name: "bundle",
+				key: "bundle"
 			},
 			{
-				name: "publish"
+				name: "publish",
+				key: "publish"
 			},
 			{
-				name: "release"
+				name: "release",
+				key: "release"
 			}
 		]
 	},
@@ -86,22 +104,28 @@ const TableOfContent = [
 		icon: "tags",
 		sub: [
 			{
-				name: "front"
+				name: "front",
+				key: "front"
 			},
 			{
-				name: "service"
+				name: "service",
+				key: "service"
 			},
 			{
-				name: "back"
+				name: "back",
+				key: "back"
 			},
 			{
-				name: "server"
+				name: "server",
+				key: "server"
 			},
 			{
-				name: "standalone"
+				name: "standalone",
+				key: "standalone"
 			},
 			{
-				name: "npm-module"
+				name: "npm-module",
+				key: "npm-module"
 			}
 		]
 	},
@@ -111,22 +135,28 @@ const TableOfContent = [
 		icon: "folder",
 		sub: [
 			{
-				name: "front"
+				name: "front",
+				key: "front"
 			},
 			{
-				name: "service"
+				name: "service",
+				key: "service"
 			},
 			{
-				name: "back"
+				name: "back",
+				key: "back"
 			},
 			{
-				name: "server"
+				name: "server",
+				key: "server"
 			},
 			{
-				name: "standalone"
+				name: "standalone",
+				key: "standalone"
 			},
 			{
-				name: "npm-module"
+				name: "npm-module",
+				key: "npm-module"
 			}
 		]
 	},
@@ -136,19 +166,24 @@ const TableOfContent = [
 		icon: "sliders",
 		sub: [
 			{
-				name: ".babelrc"
+				name: ".babelrc",
+				key: ".babelrc"
 			},
 			{
-				name: ".eslintrc"
+				name: ".eslintrc",
+				key: ".eslintrc"
 			},
 			{
-				name: "webpack.config"
+				name: "webpack.config",
+				key: "webpack.config"
 			},
 			{
-				name: ".gitignore"
+				name: ".gitignore",
+				key: ".gitignore"
 			},
 			{
-				name: ".npmignore"
+				name: ".npmignore",
+				key: ".npmignore"
 			}
 		]
 	}
