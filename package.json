@@ -66,6 +66,7 @@
     "react-markdown": "^2.5.0",
     "react-syntax-highlighter": "^5.7.0",
     "react-treebeard": "^2.0.3",
-    "redux-store-controller": "^1.1.3"
+    "redux-store-controller": "^1.1.3",
+    "serve-favicon": "^2.4.5"
   }
 }

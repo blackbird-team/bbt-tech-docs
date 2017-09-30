@@ -1,6 +1,6 @@
 /*	eslint import/no-extraneous-dependencies:0	*/
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-// const CopyWebpackPlugin = require("copy-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MinifyPlugin = require("babel-minify-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 
@@ -49,13 +49,13 @@ module.exports = {
 			disable: false,
 			allChunks: true
 		}),
-		// new CopyWebpackPlugin([
+		new CopyWebpackPlugin([
 		// 	// { from: `${__dirname}/source/img/`, to: `${__dirname}/build/img/` },
-		// 	{
-		// 		from: `${__dirname}/source/style/img/`,
-		// 		to: `${__dirname}/build/style/img/`
-		// 	}
-		// ]),
+			{
+				from: `${__dirname}/source/client/style/img/`,
+				to: `${__dirname}/public/style/img/`
+			}
+		]),
 		new MinifyPlugin()
 	]
 };

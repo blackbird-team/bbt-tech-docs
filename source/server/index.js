@@ -2,6 +2,7 @@ import http from "http";
 import express from "express";
 import path from "path";
 import fs from "fs";
+import favicon from 'serve-favicon';
 // import ip from "ip";
 import Config from "@/config";
 
@@ -49,6 +50,8 @@ class HttpServer {
 		// 	})
 		// );
 
+		this.app.use(favicon("./public/style/img/favicon.ico"));
+
 		this.app.use((req, res, next) => {
 			res.header("Access-Control-Allow-Origin", "*");
 			res.header("Access-Control-Allow-Credentials", true);
@@ -63,7 +66,7 @@ class HttpServer {
 	}
 
 	initGetHandlers() {
-		this.app.get("/favicon.ico", (req, res) => res.sendStatus(204));
+		// this.app.get("/favicon.ico", (req, res) => res.sendStatus(204));
 
 		this.app.get("/md*", (req, res) => {
 			let mark = `404 for GET: ${req.url}`;
