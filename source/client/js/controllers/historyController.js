@@ -7,6 +7,10 @@ class HistoryController extends ControllerStateStore {
 		HistoryController.basic(options);
 		super(options);
 		this.history = options.history;
+
+		this.history.listen(() => {
+			HistoryController.basic(options)
+		})
 	}
 
 	stateDidUpdate() {
