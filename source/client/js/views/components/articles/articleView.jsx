@@ -1,6 +1,6 @@
 import { Component, createElement } from "react";
 import ReactMarkdown from "react-markdown";
-import { assign, forEach }from "lodash";
+import { assign, forEach } from "lodash";
 import Config from "@/config";
 import CodeBlock from "~/views/components/common/codeBlockView.jsx";
 
@@ -22,10 +22,7 @@ class ArticleView extends Component {
 
 	getApi() {
 		const st = this.props.stores;
-		fetch(
-			`http://localhost:${Config.port}/md/${st.viewport.getStore
-				.viewport}`
-		)
+		fetch(`http://localhost:${Config.port}/md/${st.viewport.getStore.viewport}`)
 			.then(res => res.json())
 			.then(res => {
 				this.setState({ article: res.message });
@@ -57,11 +54,13 @@ class ArticleView extends Component {
 
 	clickHandler(e) {
 		e.preventDefault();
-		const vp = this.props.stores.viewport;
 
-		vp.set({
-			viewport: e.target.pathname+e.target.hash
-		});
+		if (e.target.getAttribute("target") === "_blank")
+			window.open(e.target.getAttribute("href"), "_blank");
+		else
+			this.props.stores.viewport.set({
+				viewport: e.target.pathname + e.target.hash
+			});
 	}
 }
 
