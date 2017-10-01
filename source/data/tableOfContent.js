@@ -7,7 +7,21 @@ const TableOfContent = [
 	{
 		key: "environment",
 		name: "Среда разработки",
-		icon: "terminal"
+		icon: "terminal",
+		sub: [
+			{
+				key: "cvs",
+				name: "CVS"
+			},
+			{
+				key: "platform",
+				name: "Платформа"
+			},
+			{
+				key: "ide",
+				name: "IDE"
+			}
+		]
 	},
 	{
 		key: "cvs-rules",
