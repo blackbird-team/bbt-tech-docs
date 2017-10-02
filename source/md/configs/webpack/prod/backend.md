@@ -42,7 +42,10 @@ module.exports = {
 		new CleanWebpackPlugin([`${__dirname}/build/`]),
 		new MinifyPlugin(),
         new CopyWebpackPlugin([
-        	{ from: `${__dirname}/source/md/`, to: `${__dirname}/build/md/` }
+        	{ 
+        		from: `${__dirname}/source/md/`, 
+        		to: `${__dirname}/build/md/` 
+        	}
         ]),
 	]
 };
