@@ -40,7 +40,7 @@
     "css-loader": "^0.28.7",
     "eslint": "^4.7.2",
     "eslint-config-bbt": "^1.0.0",
-    "eslint-config-bbt-react": "git+https://github.com/blackbird-team/eslint-config-bbt-react.git",
+    "eslint-config-bbt-react": "0.0.1",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
     "lint-staged": "^4.2.3",
