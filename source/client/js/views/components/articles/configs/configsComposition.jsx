@@ -46,36 +46,43 @@ class ConfigsComposition extends Component {
 		return map(this.list, (val, key) => (
 			<div key={`${val.name}-${key}`}>
 				<h2>{val.title}</h2>
-				{ConfigsComposition.getInner(val)}
+				{this.getInner(val)}
 			</div>
 		));
 	}
 
-	static getInner(val) {
+	getInner(val) {
 		return typeof val.sub === "undefined"
-			? ConfigsComposition.getProgramTypes(val)
-			: ConfigsComposition.getSub(val);
+			? this.getProgramTypes(val)
+			: this.getSub(val);
 	}
 
-	static getSub(val) {
+	getSub(val) {
 		return map(val.sub, (sub, key) => (
 			<div key={`${sub.name}-${key}`}>
 				<h4>{sub.title}</h4>
-				{ConfigsComposition.getProgramTypes(sub)}
+				{this.getProgramTypes(sub)}
 			</div>
 		));
 	}
 
-	static getProgramTypes(val) {
+	getProgramTypes(val) {
 		return (
 			<ul>
 				{map(Config.programTypes, type => (
 					<li key={`${val}-${type}`}>
-						<a href={`/configs/${val.name}/${type}`}>{type}</a>
+						<a href={`/configs/${val.name}/${type}`} onClick={this.onClick.bind(this)}>{type}</a>
 					</li>
 				))}
 			</ul>
 		);
+	}
+
+	onClick(e) {
+		e.preventDefault();
+		this.props.stores.viewport.set({
+			viewport: e.target.pathname + e.target.hash
+		});
 	}
 
 	render() {

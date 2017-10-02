@@ -3,16 +3,12 @@ import express from "express";
 import path from "path";
 import fs from "fs";
 import favicon from 'serve-favicon';
-// import ip from "ip";
 import Config from "@/config";
 
 class HttpServer {
 	constructor() {
 		this.app = express();
 		this.server = http.createServer(this.app);
-
-		// this.ip = ip.address();
-		this.ip = "localhost";
 	}
 
 	init() {
@@ -30,9 +26,9 @@ class HttpServer {
 
 	start() {
 		return new Promise(resolve => {
-			this.server.listen(Config.port, this.ip, () => {
+			this.server.listen(Config.port, Config.host, () => {
 				global.console.log(
-					`${new Date()} Server ${this.ip} is listening on port ${Config.port}`
+					`${new Date()} Server ${Config.host} is listening on port ${Config.port}`
 				);
 				resolve();
 			});
@@ -72,7 +68,7 @@ class HttpServer {
 			let mark = `404 for GET: ${req.url}`;
 
 			try {
-				mark = fs.readFileSync(path.resolve(`./source/${req.url}.md`), "utf8");
+				mark = fs.readFileSync(path.resolve(`./build/${req.url}.md`), "utf8");
 			} catch (e) {
 				global.console.log(mark);
 			}
