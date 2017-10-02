@@ -9,8 +9,8 @@ class HistoryController extends ControllerStateStore {
 		this.history = options.history;
 
 		this.history.listen(() => {
-			HistoryController.basic(options)
-		})
+			HistoryController.basic(options);
+		});
 	}
 
 	stateDidUpdate() {
@@ -34,9 +34,10 @@ class HistoryController extends ControllerStateStore {
 			case "program-types":
 				break;
 			case "program-structures": {
+				const type = path[1] || options.stores.programStructureTab.getStore.tab;
 				options.stores.programStructureTab.set({
 					tab: path[1],
-					tree: StructureFolding[path[1]]
+					tree: StructureFolding[type]
 				});
 				break;
 			}
