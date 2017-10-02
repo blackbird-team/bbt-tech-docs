@@ -1,9 +1,10 @@
 import React from "react";
 import { ComponentStateStore } from "redux-store-controller";
-import { words } from "lodash";
+import { words, size } from "lodash";
 import ArticleView from "./articleView.jsx";
 import ProgramTypesListComposition from "./programTypes/programTypesListComposition.jsx";
 import ProgramStructuresComposition from "./programStructures/programStructuresComposition.jsx";
+import ConfigsComposition from "./configs/configsComposition.jsx";
 
 class ArticleComposition extends ComponentStateStore {
 	constructor(props) {
@@ -18,6 +19,12 @@ class ArticleComposition extends ComponentStateStore {
 				return <ProgramTypesListComposition stores={this.props.stores} />;
 			case "program-structures":
 				return <ProgramStructuresComposition stores={this.props.stores} />;
+			case "configs":
+				return size(path) > 1 ? (
+					<ArticleView stores={this.props.stores} />
+				) : (
+					<ConfigsComposition stores={this.props.stores} />
+				);
 			default:
 				return <ArticleView stores={this.props.stores} />;
 		}
