@@ -15,7 +15,6 @@ export default {
 			name: "source",
 			path: "/source",
 			desc: "",
-			active: true,
 			toggled: true,
 			children: [
 				{

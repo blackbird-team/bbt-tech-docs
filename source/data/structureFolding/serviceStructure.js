@@ -37,7 +37,6 @@ export default {
 		},
 		{
 			name: "source",
-			active: true,
 			toggled: true,
 			path: "/source",
 			desc: "",

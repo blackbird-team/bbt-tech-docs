@@ -29,7 +29,6 @@ export default {
 		},
 		{
 			name: "source",
-			active: true,
 			toggled: true,
 			children: [
 				{
