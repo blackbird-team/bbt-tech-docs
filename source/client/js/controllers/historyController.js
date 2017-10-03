@@ -1,6 +1,5 @@
 import { ControllerStateStore } from "redux-store-controller";
 import { words } from "lodash";
-import StructureFolding from "@/structureFolding/index";
 
 class HistoryController extends ControllerStateStore {
 	constructor(options) {
@@ -34,10 +33,8 @@ class HistoryController extends ControllerStateStore {
 			case "program-types":
 				break;
 			case "program-structures": {
-				const type = path[1] || options.stores.programStructureTab.getStore.tab;
-				options.stores.programStructureTab.set({
-					tab: path[1],
-					tree: StructureFolding[type]
+				options.stores.programStructureTab.assign({
+					tab: path[1]
 				});
 				break;
 			}
