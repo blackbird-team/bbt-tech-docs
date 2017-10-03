@@ -1,4 +1,4 @@
-import StructureFolding from "./structureFolding/index";
+import StructureFolding from "./structureFolding";
 
 const StoreList = [
 	{
@@ -10,7 +10,7 @@ const StoreList = [
 	{
 		name: "programStructureTab",
 		options: {
-			initState: { tab: "frontend", tree: StructureFolding.frontend }
+			initState: { tab: "frontend", tree: StructureFolding }
 		}
 	}
 ];
