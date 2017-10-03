@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import { Treebeard, decorators } from "react-treebeard";
 import { ComponentStateStore } from "redux-store-controller";
+import { map } from "lodash";
 import {
 	filterTree,
 	expandFilteredNodes
 } from "~/controllers/filterController";
-import StructureFolding from "@/structureFolding/index";
+import StructureFolding from "@/structureFolding";
 import Theme from "./theme";
 
 // Example: Customising The Header Decorator To Include Icons
@@ -36,6 +37,9 @@ decorators.Header = ({ style, node }) => {
 
 				{node.name}
 			</div>
+			<div className="square-list">
+				{map(node.type, type => <div style={style[type]} />)}
+			</div>
 		</div>
 	);
 };
@@ -48,10 +52,10 @@ class ProgramStructureView extends ComponentStateStore {
 	onFilterMouseUp(e) {
 		const filter = e.target.value.trim();
 		if (!filter) {
-			this.setState({ tree: StructureFolding[this.state.tab] });
+			this.setState({ tree: StructureFolding });
 			return;
 		}
-		let filtered = filterTree(StructureFolding[this.state.tab], filter);
+		let filtered = filterTree(StructureFolding, filter);
 		filtered = expandFilteredNodes(filtered, filter);
 		this.setState({ tree: filtered });
 	}
@@ -88,26 +92,31 @@ class ProgramStructureView extends ComponentStateStore {
 					</div>
 					<TreeItemDescView item={this.state.cursor} />
 				</div>
-
 			</div>
 		);
 	}
 }
 
 class TreeItemDescView extends Component {
-	def= {
+	def = {
 		name: "Select some tree item",
 		path: "",
 		desc: ""
 	};
 
 	render() {
-		const item = typeof this.props.item === "undefined" ? this.def : this.props.item;
+		const item =
+			typeof this.props.item === "undefined" ? this.def : this.props.item;
 
-		return (<div>
-			<h2>{item.path}</h2>
-			<p>{item.desc}</p>
-		</div>)
+		return (
+			<div className="tree-item-desc">
+				<h2>{item.path}</h2>
+				<ul className="types">
+					{map(item.type, type => <li style={Theme.tree.node.header[type]}>{type}</li>)}
+				</ul>
+				<p>{item.desc}</p>
+			</div>
+		);
 	}
 }
 

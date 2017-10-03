@@ -12,8 +12,16 @@ const Theme = merge(theme, {
 			activeLink: {
 				background: '#daecf1'
 			},
+			link: {
+				cursor: 'pointer',
+				position: 'relative',
+				padding: '0px 5px',
+				display: 'flex'
+			},
 			header: {
 				base: {
+					display: "flex",
+					"align-items": "center",
 					color: '#23221f'
 				},
 				bundle: {
@@ -21,6 +29,27 @@ const Theme = merge(theme, {
 				},
 				libs: {
 					color: '#9DA5AB'
+				},
+				all: {
+					background: '#242e66'
+				},
+				service: {
+					background: "#ff9b2f"
+				},
+				standalone: {
+					background: "#cda5ff"
+				},
+				fullstack: {
+					background: "#9c5ef9"
+				},
+				frontend: {
+					background: "#86bc68"
+				},
+				backend: {
+					background: "#4c84ff"
+				},
+				npm: {
+					background: "#da743c"
 				}
 			}
 		}
