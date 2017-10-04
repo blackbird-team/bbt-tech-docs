@@ -70,8 +70,8 @@ class ConfigsComposition extends Component {
 		return (
 			<ul>
 				{map(Config.programTypes, type => (
-					<li key={`${val}-${type}`}>
-						<a href={`/configs/${val.name}/${type}`} onClick={this.onClick.bind(this)}>{type}</a>
+					<li key={`${val.name}-${type.name}`}>
+						<a href={`/configs/${val.name}/${type.name}`} onClick={this.onClick.bind(this)}>{type.name}</a>
 					</li>
 				))}
 			</ul>
