@@ -23,7 +23,8 @@
     <td class="tg-yw4l">PascalCase</td>
     <td class="tg-yw4l">camelCase</td>
     <td class="tg-yw4l">camelCase || snake_case</td>
-    <td class="tg-yw4l" colspan="2">camelCase</td>
+    <td class="tg-yw4l">kebab-case</td>
+    <td class="tg-yw4l">camelCase</td>
   </tr>
 </table>
  
