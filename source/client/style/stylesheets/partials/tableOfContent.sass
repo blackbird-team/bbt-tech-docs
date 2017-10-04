@@ -1,9 +1,11 @@
 .list-of-content
 	display: flex
-	flex-direction: row
+	flex-direction: column
 	flex-wrap: wrap
+	height: 100vw
+	max-height: 500px
 	> ul
-		width: 200px
+		width: 300px
 		.fa
 			margin-right: 10px
 	.first-level
@@ -12,5 +14,17 @@
 			color: #fff
 			padding: 10px
 			line-height: 1em
-	.sub-level
-		padding-left: 50px
+
+@media screen and (max-width: 1500px)
+	.list-of-content
+		max-height: 600px
+
+@media screen and (max-width: 1200px)
+	.list-of-content
+		max-height: 800px
+
+@media screen and (max-width: 860px)
+	.list-of-content
+		max-height: auto
+		height: auto
+		flex-wrap: nowrap
