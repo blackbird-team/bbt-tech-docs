@@ -5,7 +5,6 @@ import { isArray, map } from "lodash";
 class SectionComposition extends Component {
 	getSub(item) {
 		if (isArray(item.sub) === false) return null;
-
 		const props = { key: `${item.key}-sub`, className: "sub-level" };
 		return createElement("ul", props, this.getLevel(item));
 	}
@@ -15,7 +14,8 @@ class SectionComposition extends Component {
 	}
 
 	getItem(val) {
-		const { icon, sub } = [SectionComposition.getIcon(val.icon), this.getSub(val)];
+		const icon = SectionComposition.getIcon(val.icon)
+		const sub = this.getSub(val);
 		return createElement("li", { key: val.key }, icon, val.name, sub);
 	}
 
