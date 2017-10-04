@@ -6,6 +6,20 @@ export default {
 	desc: "Корневая директория проекта",
 	children: [
 		{
+			name: "bin",
+			type: ["cli"],
+			path: "/bin",
+			desc: "",
+			children: [
+				{
+					name: "index.min.js",
+					type: ["cli"],
+					path: "/bin/index.min.js",
+					desc: ""
+				}
+			]
+		},
+		{
 			name: "build",
 			type: ["service"],
 			path: "/build",
@@ -38,6 +52,13 @@ export default {
 					desc: ""
 				}
 			]
+		},
+		{
+			name: "log",
+			type: ["service"],
+			path: "/log",
+			desc: "",
+			children: []
 		},
 		{
 			name: "node_modules",
@@ -94,7 +115,13 @@ export default {
 								}
 							]
 						},
-						{ name: "style", children: [] }
+						{ name: "style", children: [] },
+						{
+							name: "index.html",
+							type: ["frontend"],
+							path: "/source/client/index.html",
+							desc: ""
+						}
 					]
 				},
 				{
@@ -175,6 +202,48 @@ export default {
 					desc: ""
 				}
 			]
+		},
+		{
+			name: ".babelrc",
+			type: ["service", "frontend"],
+			path: "/.babelrc",
+			desc: ""
+		},
+		{
+			name: ".eslintrc",
+			type: ["service", "frontend"],
+			path: "/.eslintrc",
+			desc: ""
+		},
+		{
+			name: ".gitignore",
+			type: ["service", "frontend"],
+			path: "/.gitignore",
+			desc: ""
+		},
+		{
+			name: ".npmignore",
+			type: ["service"],
+			path: "/.npmignore",
+			desc: ""
+		},
+		{
+			name: "package.json",
+			type: ["service", "frontend"],
+			path: "/package.json",
+			desc: ""
+		},
+		{
+			name: "webpack.dev.config.js",
+			type: ["service","frontend"],
+			path: "/webpack.dev.config.js",
+			desc: ""
+		},
+		{
+			name: "webpack.prod.config.js",
+			type: ["service", "frontend"],
+			path: "/webpack.prod.config.js",
+			desc: ""
 		}
 	]
 };
