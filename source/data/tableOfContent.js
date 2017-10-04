@@ -11,7 +11,7 @@ const TableOfContent = [
 		sub: [
 			{
 				key: "cvs",
-				name: "CVS"
+				name: "Система контроля версий"
 			},
 			{
 				key: "platform",
@@ -19,7 +19,7 @@ const TableOfContent = [
 			},
 			{
 				key: "ide",
-				name: "IDE"
+				name: "Интегрированная среда разработки"
 			}
 		]
 	},
@@ -29,12 +29,22 @@ const TableOfContent = [
 		icon: "code-fork",
 		sub: [
 			{
-				key: "commit-name",
-				name: "commit-name"
-			},
-			{
-				key: "commit-scopes",
-				name: "commit-scopes"
+				key: "commit",
+				name: "Коммит",
+				sub: [
+					{
+						key: "commit-ензу",
+						name: "Назначение"
+					},
+					{
+						key: "commit-scopes",
+						name: "Область применения"
+					},
+					{
+						key: "commit-comment",
+						name: "Комментарий"
+					}
+				]
 			}
 		]
 	},
@@ -44,12 +54,32 @@ const TableOfContent = [
 		icon: "code",
 		sub: [
 			{
-				name: "names",
-				key: "names"
+				key: "names",
+				name: "Правила именования"
 			},
 			{
-				name: "scopes",
-				key: "scopes"
+				key: "javascript",
+				name: "JavaScript",
+				sub: [
+					{
+						key: "js-common",
+						name: "Общие правила"
+					},
+					{
+						key: "js-scope",
+						name: "Область видимости",
+						sub: [
+							{
+								key: "var",
+								name: "Переменные"
+							},
+							{
+								key: "func",
+								name: "Методы/Функции"
+							}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -64,53 +94,23 @@ const TableOfContent = [
 		icon: "cogs",
 		sub: [
 			{
-				name: "babel",
-				key: "babel"
+				key: "babel",
+				name: "Babel"
 			},
 			{
-				name: "lint",
-				key: "lint"
+				key: "eslint",
+				name: "ESLint"
 			},
 			{
-				name: "webpack",
-				key: "webpack"
-			},
-			{
-				name: "idea",
-				key: "idea"
-			},
-			{
-				name: "text-editor",
-				key: "text-editor"
-			},
-			{
-				name: "sass",
-				key: "sass"
+				key: "webpack",
+				name: "Webpack"
 			}
 		]
 	},
 	{
 		key: "dev-scenario",
 		name: "Сценарии",
-		icon: "map-signs",
-		sub: [
-			{
-				name: "init",
-				key: "init"
-			},
-			{
-				name: "bundle",
-				key: "bundle"
-			},
-			{
-				name: "publish",
-				key: "publish"
-			},
-			{
-				name: "release",
-				key: "release"
-			}
-		]
+		icon: "map-signs"
 	},
 	{
 		key: "program-types",
@@ -118,61 +118,43 @@ const TableOfContent = [
 		icon: "tags",
 		sub: [
 			{
-				name: "front",
-				key: "front"
+				name: "Service",
+				key: "service",
+				sub: [
+					{
+						name: "Library",
+						key: "lib"
+					},
+					{
+						name: "Command Line Interface",
+						key: "CLI"
+					}
+				]
 			},
 			{
-				name: "service",
-				key: "service"
+				name: "Backend",
+				key: "backend"
 			},
 			{
-				name: "back",
-				key: "back"
+				name: "Frontend",
+				key: "frontend"
 			},
 			{
-				name: "server",
-				key: "server"
-			},
-			{
-				name: "standalone",
-				key: "standalone"
-			},
-			{
-				name: "npm-module",
-				key: "npm-module"
+				name: "Fullstack",
+				key: "fullstack",
+				sub: [
+					{
+						name: "Standalone",
+						key: "standalone"
+					}
+				]
 			}
 		]
 	},
 	{
 		key: "program-structures",
 		name: "Структуры программ",
-		icon: "folder",
-		sub: [
-			{
-				name: "front",
-				key: "front"
-			},
-			{
-				name: "service",
-				key: "service"
-			},
-			{
-				name: "back",
-				key: "back"
-			},
-			{
-				name: "server",
-				key: "server"
-			},
-			{
-				name: "standalone",
-				key: "standalone"
-			},
-			{
-				name: "npm-module",
-				key: "npm-module"
-			}
-		]
+		icon: "folder"
 	},
 	{
 		key: "configs",
@@ -180,16 +162,8 @@ const TableOfContent = [
 		icon: "sliders",
 		sub: [
 			{
-				name: ".babelrc",
-				key: ".babelrc"
-			},
-			{
 				name: ".eslintrc",
 				key: ".eslintrc"
-			},
-			{
-				name: "webpack.config",
-				key: "webpack.config"
 			},
 			{
 				name: ".gitignore",
