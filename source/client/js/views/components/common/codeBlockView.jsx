@@ -1,6 +1,11 @@
 import { Component, createElement } from "react";
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { darcula } from "react-syntax-highlighter/dist/styles";
+import SyntaxHighlighter, { registerLanguage } from "react-syntax-highlighter/dist/light"
+import js from 'react-syntax-highlighter/dist/languages/javascript';
+import json from 'react-syntax-highlighter/dist/languages/json';
+import darcula from "react-syntax-highlighter/dist/styles/darcula";
+
+registerLanguage('javascript', js);
+registerLanguage('json', json);
 
 class CodeBlockView extends Component {
 	render() {
