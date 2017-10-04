@@ -1,41 +1,22 @@
 # Инструментарий
 
-## Babel
+## [Babel](/tools/babel)
 
-## ESLint
+<p><a target="_blank" href="https://babeljs.io/">Официальная документация</a></p>
 
-### Подключение
+Препроцессор JavaScript. Транскомпилирует исходный код в любой выбранный стандарт EcmaScript.
 
-```npm
-npm i -D eslint 
-```
+## [ESLint](/tools/eslint)
 
-### Правила
-#### Все типы программ
+<p><a target="_blank" href="https://eslint.org/">Официальная документация</a></p>
 
-<ul>
-<li><a target="_blank" href="https://github.com/blackbird-team/eslint-config-bbt/blob/master/README.md">Инструкция</a></li>
-<li><a href="/configs/eslint/backend">Пример конфигурации(backend)</a></li>
-</ul>
+Инструмент выявления и оповещения о наличии несоответствий исходного кода принятому паттерну.
 
+## [Webpack](/tools/webpack)
 
-```npm
-npm i -D eslint-config-bbt
-```
+<p><a target="_blank" href="https://webpack.js.org/">Официальная документация</a></p>
 
-#### Содержащие GUI / пакет views
-
-<ul>
-<li><a target="_blank" href="https://github.com/blackbird-team/eslint-config-bbt-react/blob/master/README.md">Инструкция</a></li>
-<li><a href="/configs/eslint/frontend">Пример конфигурации(frontend)</a></li>
-</ul>
-
-
-```npm
-npm i -D eslint-config-bbt-react
-```
-
-## Webpack
+Модуль сборки классов программы на основе графика зависимостей.
 
 ## BBT library
 
