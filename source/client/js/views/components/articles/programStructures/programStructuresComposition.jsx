@@ -15,9 +15,9 @@ class ProgramStructuresComposition extends Component {
 	render() {
 		return (
 			<div>
-				<div className="tab-menu">
-					{this.getTabMenu()}
-				</div>
+				{/*<div className="tab-menu">*/}
+					{/*{this.getTabMenu()}*/}
+				{/*</div>*/}
 				<ProgramStructureView stores={this.props.stores} />
 			</div>
 		);
