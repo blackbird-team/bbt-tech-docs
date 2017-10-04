@@ -25,7 +25,10 @@ const Theme = merge(theme, {
 					color: '#23221f'
 				},
 				bundle: {
-					color: '#666'
+					color: '#ab7746'
+				},
+				temp: {
+					color: '#ab8ba8'
 				},
 				libs: {
 					color: '#9DA5AB'

@@ -21,23 +21,26 @@ decorators.Header = ({ style, node }) => {
 		case "node_modules":
 			titleStyle = style.libs;
 			break;
+		case "bin":
 		case "build":
-		case "config":
 		case "public":
 			titleStyle = style.bundle;
+			break;
+		case "config":
+		case "log":
+			titleStyle = style.temp;
 			break;
 		default:
 			break;
 	}
 
 	return (
-		<div style={style.base}>
-			<div style={titleStyle}>
+		<div style={style.base} key={node.name}>
+			<div key={`${node.name}-title`} style={titleStyle}>
 				<i className={iconClass} style={iconStyle} />
-
 				{node.name}
 			</div>
-			<div className="square-list">
+			<div key={`${node.name}-types`} className="square-list">
 				{map(node.type, type => <div style={style[type]} />)}
 			</div>
 		</div>
@@ -112,7 +115,7 @@ class TreeItemDescView extends Component {
 			<div className="tree-item-desc">
 				<h2>{item.path}</h2>
 				<ul className="types">
-					{map(item.type, type => <li style={Theme.tree.node.header[type]}>{type}</li>)}
+					{map(item.type, type => <li key={type} style={Theme.tree.node.header[type]}>{type}</li>)}
 				</ul>
 				<p>{item.desc}</p>
 			</div>
