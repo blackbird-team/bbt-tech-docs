@@ -1,14 +1,11 @@
-import http from "http";
 import express from "express";
 import path from "path";
 import fs from "fs";
-import favicon from 'serve-favicon';
 import Config from "@/config";
 
 class HttpServer {
 	constructor() {
 		this.app = express();
-		this.server = http.createServer(this.app);
 	}
 
 	init() {
@@ -26,9 +23,9 @@ class HttpServer {
 
 	start() {
 		return new Promise(resolve => {
-			this.server.listen(Config.port, Config.host, () => {
+			this.app.listen(Config.port, () => {
 				global.console.log(
-					`${new Date()} Server ${Config.host} is listening on port ${Config.port}`
+					`${new Date()} Server is listening on port ${Config.port}`
 				);
 				resolve();
 			});
@@ -36,18 +33,6 @@ class HttpServer {
 	}
 
 	initMiddleware() {
-		// this.app.use(helmet.noCache());
-		// this.app.use(helmet.frameguard());
-		//
-		// this.app.use(bodyParser.json());
-		// this.app.use(
-		// 	bodyParser.urlencoded({
-		// 		extended: true
-		// 	})
-		// );
-
-		this.app.use(favicon("./public/style/img/favicon.ico"));
-
 		this.app.use((req, res, next) => {
 			res.header("Access-Control-Allow-Origin", "*");
 			res.header("Access-Control-Allow-Credentials", true);
@@ -62,13 +47,13 @@ class HttpServer {
 	}
 
 	initGetHandlers() {
-		// this.app.get("/favicon.ico", (req, res) => res.sendStatus(204));
+		this.app.get("/favicon.ico", (req, res) => res.sendStatus(204));
 
 		this.app.get("/md*", (req, res) => {
 			let mark = `404 for GET: ${req.url}`;
 
 			try {
-				mark = fs.readFileSync(path.resolve(`./build/${req.url}.md`), "utf8");
+				mark = fs.readFileSync(path.resolve(`./source/${req.url}.md`), "utf8");
 			} catch (e) {
 				global.console.log(mark);
 			}
@@ -76,7 +61,7 @@ class HttpServer {
 		});
 
 		this.app.get('*', (req, res) => {
-			res.sendFile(path.resolve('./index.html'));
+			res.sendFile(path.resolve('./test/server/index.html'));
 		});
 	}
 }

@@ -60,6 +60,10 @@ module.exports = {
 			{
 				from: `${__dirname}/source/md/`,
 				to: `${__dirname}/build/tech/md/`
+			},
+			{
+				from: `${__dirname}/source/tech/index.html`,
+				to: `${__dirname}/public/tech/index.html`
 			}
 		]),
 		new MinifyPlugin()
