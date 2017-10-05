@@ -2,7 +2,7 @@
   "name": "bbt-tech-docs",
   "version": "0.0.1",
   "description": "Development technology inside BlackBird Team",
-  "main": "./build/index.js",
+  "main": "./public/tech/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --config ./webpack.dev.config.js --hot --watch --inline",
