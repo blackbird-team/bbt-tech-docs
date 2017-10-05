@@ -33,56 +33,35 @@ const loaders = {
 	}
 };
 
-const serverConfig = {
-	target: "node",
-	context: `${__dirname}/source/server/`,
-	entry: [`${__dirname}/source/server/index.js`],
-	output: {
-		path: `${__dirname}/build/`,
-		filename: "main.min.js"
-	},
-	module: {
-		rules: [loaders.js, loaders.json]
-	},
-	plugins: [
-		new CleanWebpackPlugin([`${__dirname}/build/`]),
-		new CopyWebpackPlugin([
-			{
-				from: `${__dirname}/source/md/`,
-				to: `${__dirname}/build/md/`
-			}
-		]),
-		new MinifyPlugin()
-	]
-};
-
-const frontendConfig = {
+module.exports = {
 	target: "web", // <=== can be omitted as default is 'web'
-	context: `${__dirname}/source/client/`,
-	entry: [`${__dirname}/source/client/js/index.js`],
+	context: `${__dirname}/source/tech/`,
+	entry: [`${__dirname}/source/tech/js/index.js`],
 	output: {
-		path: `${__dirname}/public/`,
-		publicPath: "/public/",
-		filename: "main.min.js"
+		path: `${__dirname}/public/tech/`,
+		publicPath: "/public/tech/",
+		filename: "tech.min.js"
 	},
 	module: {
 		rules: [loaders.sass, loaders.media, loaders.js, loaders.json]
 	},
 	plugins: [
-		new CleanWebpackPlugin([`${__dirname}/public/`]),
+		new CleanWebpackPlugin([`${__dirname}/public/`, `${__dirname}/build/`]),
 		new ExtractTextPlugin({
-			filename: "./style/style.min.css",
+			filename: "./style/tech.min.css",
 			disable: false,
 			allChunks: true
 		}),
 		new CopyWebpackPlugin([
 			{
-				from: `${__dirname}/source/client/style/img/`,
-				to: `${__dirname}/public/style/img/`
+				from: `${__dirname}/source/tech/style/img/`,
+				to: `${__dirname}/public/tech/style/img/`
+			},
+			{
+				from: `${__dirname}/source/md/`,
+				to: `${__dirname}/build/tech/md/`
 			}
 		]),
 		new MinifyPlugin()
 	]
 };
-
-module.exports = [serverConfig, frontendConfig];

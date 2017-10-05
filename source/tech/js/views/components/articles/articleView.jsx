@@ -1,7 +1,6 @@
 import { Component, createElement } from "react";
 import ReactMarkdown from "react-markdown";
 import { assign, forEach } from "lodash";
-import Config from "@/config";
 import CodeBlock from "~/views/components/common/codeBlockView.jsx";
 
 class ArticleView extends Component {
@@ -22,7 +21,7 @@ class ArticleView extends Component {
 
 	getApi() {
 		const st = this.props.stores;
-		fetch(`http://${Config.host}:${Config.port}/md/${st.viewport.getStore.viewport}`)
+		fetch(`/md/${st.viewport.getStore.viewport}`)
 			.then(res => res.json())
 			.then(res => {
 				this.setState({ article: res.message });

@@ -1,8 +1,29 @@
 import React, { Component, createElement } from "react";
-import { map } from "lodash";
 import FontAwesome from "react-fontawesome";
-import ProgramTypeItemComposition from "./programTypeItemComposition.jsx";
-import ProgramTypesLinkView from "./projectTypeLinkComposition.jsx";
+
+class HeaderIconLinks extends Component {
+	onClick(icon, e) {
+		console.log(this.props.item.name, icon);
+	}
+
+	getIcon(options) {
+		const param = {
+			name: options.icon,
+			onClick: this.onClick.bind(this, options.link)
+		};
+		return createElement(FontAwesome, param);
+	}
+
+	render() {
+		return createElement(
+			this.props.title || "h1",
+			null,
+			this.props.item.name,
+			this.getIcon({ icon: "folder", link: "program-structures" }),
+			this.getIcon({ icon: "sliders", link: "configs" })
+		);
+	}
+}
 
 class ProgramTypesListComposition extends Component {
 	render() {
@@ -54,30 +75,6 @@ class ProgramTypesListComposition extends Component {
 				<p>Fullstack + Electron</p>
 				<p>Автономное программное решение, для запуска в среде ОС</p>
 			</div>
-		);
-	}
-}
-
-class HeaderIconLinks extends Component {
-	onClick(icon, e) {
-		console.log(this.props.item.name, icon);
-	}
-
-	getIcon(options) {
-		const param = {
-			name: options.icon,
-			onClick: this.onClick.bind(this, options.link)
-		};
-		return createElement(FontAwesome, param);
-	}
-
-	render() {
-		return createElement(
-			this.props.title || "h1",
-			null,
-			this.props.item.name,
-			this.getIcon({ icon: "folder", link: "program-structures" }),
-			this.getIcon({ icon: "sliders", link: "configs" })
 		);
 	}
 }

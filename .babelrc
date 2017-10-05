@@ -9,7 +9,7 @@
     ["babel-plugin-root-import",
       [{
         "rootPathPrefix": "~",
-        "rootPathSuffix": "source/client/js"
+        "rootPathSuffix": "source/tech/js"
       },
         {
           "rootPathPrefix": "@",

@@ -1,13 +1,13 @@
 module.exports = {
-	context: `${__dirname}/source/client/`,
+	context: `${__dirname}/source/tech/`,
 	entry: [
-		`${__dirname}/source/client/js/index`,
+		`${__dirname}/source/tech/js/index`,
 		`${__dirname}/node_modules/webpack/hot/dev-server`
 	],
 	output: {
-		path: `${__dirname}/public/`,
-		publicPath: "/public/",
-		filename: "main.min.js"
+		path: `${__dirname}/public/tech/`,
+		publicPath: "/public/tech/",
+		filename: "tech.min.js"
 	},
 	module: {
 		rules: [
