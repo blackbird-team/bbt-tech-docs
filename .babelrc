@@ -1,20 +1,17 @@
 {
-  "presets" : ["react", ["env", {
-    "targets": {
-      "browser": true
-    }
-  }]],
-  "plugins": [
-    ["transform-class-properties"],
-    ["babel-plugin-root-import",
-      [{
-        "rootPathPrefix": "~",
-        "rootPathSuffix": "source/tech/js"
-      },
-        {
-          "rootPathPrefix": "@",
-          "rootPathSuffix": "source/data"
-        }]
+  "presets" : [
+    ["bbt",
+      {
+        "react": true,
+        "roots": [
+          {
+            "rootPathPrefix": "~", "rootPathSuffix": "source/tech/js"
+          },
+          {
+            "rootPathPrefix": "@", "rootPathSuffix": "source/data"
+          }
+        ]
+      }
     ]
   ]
 }
