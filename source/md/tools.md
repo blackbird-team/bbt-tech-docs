@@ -3,14 +3,16 @@
 ## [Babel](/tools/babel)
 
 <p><a target="_blank" href="https://babeljs.io/">Официальная документация</a></p>
+<p><a target="_blank" href="https://github.com/babel/awesome-babel">Популярные расширения</a></p>
 
 Препроцессор JavaScript. Транскомпилирует исходный код в любой выбранный стандарт EcmaScript.
 
 ## [ESLint](/tools/eslint)
 
 <p><a target="_blank" href="https://eslint.org/">Официальная документация</a></p>
+<p><a target="_blank" href="https://github.com/dustinspecker/awesome-eslint">Популярные расширения</a></p>
 
-Инструмент выявления и оповещения о наличии несоответствий исходного кода принятому паттерну.
+Расширяемая утилита выявления и оповещения о наличии несоответствий в коде Javascript и JSX.
 
 ## [Webpack](/tools/webpack)
 

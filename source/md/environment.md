@@ -44,32 +44,45 @@
 <p>ESLint</p>
 </div>
 <p><b>Используемая версия:</b> <a target="_blank" href="https://eslint.org/blog/2017/09/eslint-v4.8.0-released" />4.8.0</a></p>
+<p>Расширяемая утилита выявления и оповещения о наличии несоответствий в коде Javascript и JSX.</p>
+<p><a target="_blank" href="https://eslint.org/">Официальная документация</a>
+<br /><a href="/environment/eslint">Описание</a>
+<br /><a href="/tools/eslint">Использование</a></p>
 <h3>Упаковщик</h3>
 <div class="logo-block">
 <div class="logo-icon medium webpack"></div>
 <p>Webpack</p>
 </div>
 <p><b>Используемая версия:</b> <a target="_blank" href="https://github.com/webpack/webpack/releases/tag/v3.6.0" />3.6.0</a></p>
+<p>Модуль сборки классов программы на основе графика зависимостей.</p>
+<p><a target="_blank" href="https://webpack.js.org/">Официальная документация</a>
+<br /><a href="/tools/webpack">Использование</a></p>
 </div>
 <div class="half"> 
 <h3>Препроцессоры</h3>
 <div class="logo-block">
 <div class="logo-icon medium babel"></div>
-<p><a href="/environment/babel">Babel</a></p>
+<p>Babel</p>
 </div>
-<p><a target="_blank" href="https://babeljs.io/">Официальная документация</a></p>
 <p><b>Используемая версия:</b> <a target="_blank" href="https://github.com/babel/babel/releases/tag/v6.26.0" />6.26.0</a></p>
 <p>Препроцессор для Javascript с возможностью транспиляции исходного кода.</p>
+<p><a target="_blank" href="https://babeljs.io/">Официальная документация</a>
+<br /><a href="/environment/babel">Описание</a>
+<br /><a href="/tools/babel">Использование</a></p>
 <div class="logo-block">
 <div class="logo-icon medium sass"></div>
 <p>Sass</p>
 </div>
 <p><b>Используемая версия:</b> <a target="_blank" href="http://sass.logdown.com/posts/2026639-sass-35-is-released" />3.5</a></p>
+<p>Метаязык на основе CSS, предназначенный для увеличения уровня абстракции CSS кода и упрощения файлов каскадных таблиц стилей.</p>
+<p><a target="_blank" href="http://sass-lang.com/documentation/">Официальная документация</a></p>
 <div class="logo-block">
 <div class="logo-icon medium pug"></div>
 <p>Pug</p>
 </div>
 <p><b>Используемая версия:</b> <a target="_blank" href="https://github.com/pugjs/pug/releases/tag/pug%402.0.0-rc.4" />2.0.0</a></p>
+<p>Препроцессор HTML, шаблонизатор.</p>
+<p><a target="_blank" href="https://pugjs.org/api/getting-started.html">Официальная документация</a></p>
 </div>
 </div>
 
