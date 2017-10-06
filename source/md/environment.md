@@ -55,9 +55,11 @@
 <h3>Препроцессоры</h3>
 <div class="logo-block">
 <div class="logo-icon medium babel"></div>
-<p>Babel</p>
+<p><a href="/environment/babel">Babel</a></p>
 </div>
+<p><a target="_blank" href="https://babeljs.io/">Официальная документация</a></p>
 <p><b>Используемая версия:</b> <a target="_blank" href="https://github.com/babel/babel/releases/tag/v6.26.0" />6.26.0</a></p>
+<p>Препроцессор для Javascript с возможностью транспиляции исходного кода.</p>
 <div class="logo-block">
 <div class="logo-icon medium sass"></div>
 <p>Sass</p>
