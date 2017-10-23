@@ -31,7 +31,7 @@
 <div class="logo-icon medium node"></div>
 <p>Node JS</p>
 </div>
-<p><b>Используемая версия:</b> <a target="_blank" href="https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V8.md#8.6.0" />8.6.0</a></p>
+<p><b>Используемая версия:</b> <a target="_blank" href="https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V8.md#8.7.0" />8.7.0</a></p>
 <ul>
 <li><a target="_blank" href="https://nodejs.org/dist/latest-v8.x/docs/api/">Documentation</a></li>
 <li><a target="_blank" href="https://learn.javascript.ru/screencast/nodejs">Screen cast</a></li>
@@ -43,7 +43,7 @@
 <div class="logo-icon medium eslint"></div>
 <p>ESLint</p>
 </div>
-<p><b>Используемая версия:</b> <a target="_blank" href="https://eslint.org/blog/2017/09/eslint-v4.8.0-released" />4.8.0</a></p>
+<p><b>Используемая версия:</b> <a target="_blank" href="https://eslint.org/blog/2017/10/eslint-v4.9.0-released" />4.9.0</a></p>
 <p>Расширяемая утилита выявления и оповещения о наличии несоответствий в коде Javascript и JSX.</p>
 <p><a target="_blank" href="https://eslint.org/">Официальная документация</a>
 <br /><a href="/environment/eslint">Описание</a>
