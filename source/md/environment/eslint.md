@@ -1,6 +1,6 @@
 # Eslint
 
-<p><b>Используемая версия:</b> <a target="_blank" href="https://eslint.org/blog/2017/09/eslint-v4.8.0-released" />4.8.0</a></p>
+<p><b>Используемая версия:</b> <a target="_blank" href="https://eslint.org/blog/2017/10/eslint-v4.10.0-released" />4.10.0</a></p>
 <p><a target="_blank" href="https://eslint.org/">Официальная документация</a></p>
 
 Расширяемая утилита выявления и оповещения о наличии несоответствий в коде Javascript и JSX.

@@ -31,7 +31,7 @@
 <div class="logo-icon medium node"></div>
 <p>Node JS</p>
 </div>
-<p><b>Используемая версия:</b> <a target="_blank" href="https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V8.md#8.7.0" />8.7.0</a></p>
+<p><b>Используемая версия:</b> <a target="_blank" href="https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V8.md#8.9.0" />8.9.0</a></p>
 <ul>
 <li><a target="_blank" href="https://nodejs.org/dist/latest-v8.x/docs/api/">Documentation</a></li>
 <li><a target="_blank" href="https://learn.javascript.ru/screencast/nodejs">Screen cast</a></li>
@@ -43,7 +43,7 @@
 <div class="logo-icon medium eslint"></div>
 <p>ESLint</p>
 </div>
-<p><b>Используемая версия:</b> <a target="_blank" href="https://eslint.org/blog/2017/10/eslint-v4.9.0-released" />4.9.0</a></p>
+<p><b>Используемая версия:</b> <a target="_blank" href="https://eslint.org/blog/2017/10/eslint-v4.10.0-released" />4.10.0</a></p>
 <p>Расширяемая утилита выявления и оповещения о наличии несоответствий в коде Javascript и JSX.</p>
 <p><a target="_blank" href="https://eslint.org/">Официальная документация</a>
 <br /><a href="/environment/eslint">Описание</a>
@@ -53,7 +53,7 @@
 <div class="logo-icon medium webpack"></div>
 <p>Webpack</p>
 </div>
-<p><b>Используемая версия:</b> <a target="_blank" href="https://github.com/webpack/webpack/releases/tag/v3.6.0" />3.6.0</a></p>
+<p><b>Используемая версия:</b> <a target="_blank" href="https://github.com/webpack/webpack/releases/tag/v3.8.1" />3.8.1</a></p>
 <p>Модуль сборки классов программы на основе графика зависимостей.</p>
 <p><a target="_blank" href="https://webpack.js.org/">Официальная документация</a>
 <br /><a href="/tools/webpack">Использование</a></p>
