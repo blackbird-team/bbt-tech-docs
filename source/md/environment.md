@@ -6,7 +6,7 @@
 <div class="logo-block">
 <div class="logo-icon medium git"></div>
 </div>
-<p><b>Используемая версия:</b> <a target="_blank" href="https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.14.2.txt" />2.14.2</a></p>
+<p><b>Используемая версия:</b> <a target="_blank" href="https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.15.0.txt" />2.15.0</a></p>
 <ul>
 <li><a href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/" target="_blank">Генерация SSH ключа</a></li>
 <li><a href="https://githowto.com/uk" target="_blank">Handbook</a></li>
